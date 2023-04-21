@@ -14,4 +14,4 @@ Audit Viewer is used to review and analyze audit trail.
  
 3)Go to http://myapp/audits-viewer
 
-![Image text](https://github.com/Sunshift-Developers/laravel-audit-viewer/blob/main/asset/view_img.png)
+![Image text](https://github.com/Sunshift-Developers/laravel-audit-viewer/blob/main/asset/example.png)

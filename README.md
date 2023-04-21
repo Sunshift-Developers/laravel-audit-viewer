@@ -1,6 +1,6 @@
 README
 
-Audit Viewer for Laravel 8 and owen-it/laravel-auditing" : 13.4
+Audit Viewer for Laravel 8 and owen-it/laravel-auditing" : 13
 Install via composer
 
 

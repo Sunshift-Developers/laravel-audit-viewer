@@ -45,6 +45,9 @@
             overflow-x: scroll;
             font-size: 15px;
         }
+        thead tr {
+            font-size: 14px;
+        }
         .box {
             width: 90%;
             margin: 0 auto;

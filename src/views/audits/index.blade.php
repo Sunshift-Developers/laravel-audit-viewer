@@ -43,6 +43,7 @@
         td {
             max-width: 400px;
             overflow-x: scroll;
+            font-size: 15px;
         }
         .box {
             width: 90%;
@@ -83,6 +84,7 @@
               <th scope="col">Edited by:</th>
               <th scope="col">id edited</th>
               <th scope="col">Model</th>
+              <th scope="col">Event</th>
               <th scope="col">New Data</th>
               <th scope="col">Old Data</th>
             </tr>
@@ -96,6 +98,7 @@
                             <td>{{ $audit->user_id }}</td>
                             <td>{{ $audit->auditable_id }}</td>
                             <td>{{ $audit->auditable_type }}</td>
+                            <td>{{ $audit->event }}</td>
                             <td>
                                 @foreach ($audit->new_values as $key => $value)
                                     <li>{{ $key }} : {{$value}}</li>

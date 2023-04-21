@@ -1,5 +1,5 @@
 {
-    "name": "sunshift/audits",
+    "name": "sunshift/laravel-audit-viewer",
     "description": "A Laravel audits viewer",
     "license": "MIT",
     "type": "library",

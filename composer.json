@@ -12,8 +12,6 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4|^8.0",
-        "laravel/framework": "^8.0",
-        "owen-it/laravel-auditing" : "^13.4",
         "sunshift/audits": "dev-main" 
     },
     "autoload": {

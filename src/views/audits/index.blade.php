@@ -75,7 +75,19 @@
             <p>by Sunshift Dev</p>
         </div>
         <form class="form-inline my-2 my-lg-0">
-            <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="{{$search ?? ''}}">
+            <div class="form-group mr-2">
+                <select class="form-control" name="field">
+                    <option value="created_at">Date</option>
+                    <option value="user_id">Edited by</option>
+                    <option value="auditable_id">Id Edited</option>
+                    <option value="auditable_type">Model</option>
+                    <option value="old_values">Old Values</option>
+                    <option value="new_values">New Values</option>
+                </select>
+            </div>
+            <div class="form-group mr-2">
+                <input name="search" class="form-control" type="search" placeholder="Search" aria-label="Search" value="{{$search ?? ''}}">
+            </div>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </header>
@@ -88,8 +100,8 @@
               <th scope="col">id edited</th>
               <th scope="col">Model</th>
               <th scope="col">Event</th>
-              <th scope="col">New Data</th>
               <th scope="col">Old Data</th>
+              <th scope="col">New Data</th>
             </tr>
           </thead>
           <tbody>
@@ -103,12 +115,12 @@
                             <td>{{ $audit->auditable_type }}</td>
                             <td>{{ $audit->event }}</td>
                             <td>
-                                @foreach ($audit->new_values as $key => $value)
+                                @foreach ($audit->old_values as $key => $value)
                                     <li>{{ $key }} : {{$value}}</li>
                                 @endforeach
                             </td>
                             <td>
-                                @foreach ($audit->old_values as $key => $value)
+                                @foreach ($audit->new_values as $key => $value)
                                     <li>{{ $key }} : {{$value}}</li>
                                 @endforeach
                             </td>
